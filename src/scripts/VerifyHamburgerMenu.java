@@ -1,7 +1,8 @@
 package scripts;
 
-public class VerifyHamburgerMenu {
-	@Test
+public class VerifyHamburgerMenu 
+{
+	
 	
 
 }

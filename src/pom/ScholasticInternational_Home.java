@@ -76,7 +76,28 @@ public class ScholasticInternational_Home extends BasePage
 	@FindBy(xpath= "//a[contains(@class, 'anc_btn_red')]")
 	private WebElement view_All_Catalogs_button;
 	
+	@FindBy(xpath= "//section[@id='block-views-landing-page-block']/h2")
+	private WebElement ListBuilderHeader;
+	
+	@FindBy(xpath= "//section[@id='block-views-landing-page-block']/div")
+	private WebElement ListBuilderSearchBox;
+	
+	//ListBuilder Searchbox and button
+	@FindBy(xpath= "//input[@class='search_term'] ")
+	private WebElement ListBuilderInputBox;
+	
+	@FindBy(id="list_builder")
+	private WebElement ListBuilderSearchButton;
+	
+	@FindBy(xpath= "//tr[@class='row-1 row-first row-last']")
+	private WebElement ListBuilderSRBookList; //SRBookList= Scholastic recommended book lists
+	
+	
+	
+	
 	//Methods to verify the elements
+	
+	
 	
 	public void verifyHomeLogo()
 	{
