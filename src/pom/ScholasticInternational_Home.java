@@ -92,13 +92,33 @@ public class ScholasticInternational_Home extends BasePage
 	@FindBy(xpath= "//tr[@class='row-1 row-first row-last']")
 	private WebElement ListBuilderSRBookList; //SRBookList= Scholastic recommended book lists
 	
+	@FindBy(xpath= "//section[@id='block-views-news-block-1']/h2")
+	private WebElement NewsEventsHeader; //
 	
+	@FindBy(xpath= "//section[@class='col-sm-12']")
+	private WebElement NewsEventsBlock; 
+	
+	@FindBy(linkText= "View All News & Events ")
+	private WebElement ViewAllNewsEvents; 
+	
+	@FindBy(linkText= "//div[@class='view-header']/h2")
+	private WebElement NeedMoreInfor; 
+	
+	@FindBy(linkText= "Contact Us Online")
+	private WebElement NMI_ContactUsOnlineButton; 
+	
+	@FindBy(xpath= "//section [@id='block-simplenews-5172']/h2")
+	private WebElement SubscribeNewsletterHeader; 
+	
+	@FindBy(id="edit-mail")
+	private WebElement emailInputBox;
+	
+	@FindBy(id="newsletter_subscribe_footer")
+	private WebElement SubscribeButton;
 	
 	
 	//Methods to verify the elements
-	
-	
-	
+		
 	public void verifyHomeLogo()
 	{
 		hamburger_Menu_HomeButton.isDisplayed();
