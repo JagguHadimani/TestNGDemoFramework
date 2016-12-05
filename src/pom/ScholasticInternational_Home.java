@@ -107,6 +107,7 @@ public class ScholasticInternational_Home extends BasePage
 	@FindBy(linkText= "Contact Us Online")
 	private WebElement NMI_ContactUsOnlineButton; 
 	
+	//Subscribe
 	@FindBy(xpath= "//section [@id='block-simplenews-5172']/h2")
 	private WebElement SubscribeNewsletterHeader; 
 	
