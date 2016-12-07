@@ -120,10 +120,24 @@ public class ScholasticInternational_Home extends BasePage
 	
 	//Methods to verify the elements
 		
-	public void verifyHomeLogo()
+	public void HomeLogo()
 	{
 		hamburger_Menu_HomeButton.isDisplayed();
 	}
+	
+	public void siteSearch()	
+	{
+		searchInputBox.sendKeys("Harry");
+		searchButton.click();
+	}
+		
+	
+	
+	public void ContactUS()
+	{
+		contactUs_Main_Menu.click();
+	}
+	
 	
 
 

@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 import pom.ScholasticInternational_Home;
 
-public class VerifyHamburgerMenu extends ScholasticInternational_Home
+public class VerifyHamburgerMenu extends ScholasticInternational_Home extends BaseTest
 {
 	public VerifyHamburgerMenu(WebDriver driver) {
 		super(driver);
@@ -14,6 +14,7 @@ public class VerifyHamburgerMenu extends ScholasticInternational_Home
 
 	@Test
 	public void verifyHamMenu()
+	
 	
 	{
 	
