@@ -112,19 +112,38 @@ public class ScholasticInternational_Home extends BasePage
 	private WebElement SubscribeNewsletterHeader; 
 	
 	@FindBy(id="edit-mail")
-	private WebElement emailInputBox;
+	private WebElement EmailInputBox;
 	
 	@FindBy(id="newsletter_subscribe_footer")
 	private WebElement SubscribeButton;
+	
+	//Signin Pop Up
+	@FindBy(xpath = "//div[@class='popups-container']")
+	private WebElement SigninPopup;
+	
+	@FindBy(id="edit-name")
+	private WebElement UIDEmail;
+	
+	@FindBy(id="edit-pass")
+	private WebElement Password;
+	
+	@FindBy(id="scholastic_user_login_popup")
+	private WebElement LoginButton;
+	
+	@FindBy(linkText= "Register Now")
+	private WebElement RegisterButton;
+	
+	@FindBy(xpath="//span[contains(text(), 'Close')]")
+	private WebElement PopupClose;
 	
 	
 	//Methods to verify the elements
 		
 	public void verifyHomeLogo()
 	{
-		hamburger_Menu_HomeButton.isDisplayed();
+		homeLogo.isDisplayed();
 	}
 	
-
+	public void 
 
 }
