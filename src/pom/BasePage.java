@@ -22,6 +22,7 @@ public abstract class BasePage {
 		String aTitle = driver.getTitle();
 		Assert.assertEquals(aTitle, eTitle);
 		
+		
 	}
 
 }

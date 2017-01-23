@@ -13,14 +13,18 @@ public class VerifyHamburgerMenu extends ScholasticInternational_Home
 	}
 
 	@Test
-	public void verifyHamMenu()
+	public void verifyHamMenu_HomeButton()
 	
 	{
 		ScholasticInternational_Home home = new ScholasticInternational_Home(driver);
 		home.verifyHomeLogo();
-		
-	
+			
 	}
 	
+	@Test
+	public void verifyHamberger_Home()
+	{
+		
+	}
 
 }

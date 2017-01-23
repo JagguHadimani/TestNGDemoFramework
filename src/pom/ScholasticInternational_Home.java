@@ -10,6 +10,8 @@ public class ScholasticInternational_Home extends BasePage
 	public ScholasticInternational_Home(WebDriver driver) {
 		super(driver);
 		
+	
+		
 	}
 
 	@FindBy(xpath ="//a[@class='logo']")
@@ -34,7 +36,7 @@ public class ScholasticInternational_Home extends BasePage
 	//	private WebElement ContactUs_Main_Menu;
 	
 	@FindBy(xpath= "//button[@type='button']")
-	private WebElement hamburger_Menu;
+	private WebElement hamburger_Menu_Button;
 	
 	@FindBy (id= "//a[@id='main-menu']")
 	private WebElement hamburger_Menu_HomeButton;
@@ -144,6 +146,67 @@ public class ScholasticInternational_Home extends BasePage
 		homeLogo.isDisplayed();
 	}
 	
-	public void 
+	public void verifyHamburgermenu()
+	/*there are multiple tabs which link to respective page. Verify all the tabs redirect to the 
+	respective pages using page titles 
+	
+	HamMenu is expanded when it is only on home page, menu is contacted when user is on any page other than home page*/
+	{
+		/*//can I verify all the elements of a section in one method by may putting them in a collection say list or set?
+		hamburger_Menu.isDisplayed();
+		hamburger_Menu_HomeButton.isDisplayed();
+		hbm_Products.isDisplayed();
+		hbm_Catalogs.isDisplayed();*/
+		if(	hamburger_Menu_HomeButton.isDisplayed())
+		{
+			hamburger_Menu_HomeButton.click();
+			
+		}
+		else 
+		{
+			hamburger_Menu_Button.click();
+			hamburger_Menu_HomeButton.click();
+			
+			verifyTitle("Scholastic: Children Book Publishing | Scholastic International");
+			
+		}
+	}
+	
+	public void verifySearchFunctionality()
+	{
+		if(searchInputBox.isDisplayed())
+		searchInputBox.sendKeys("Prime maths");
+		searchButton.click();
+		
+				
+	}
+	
+	public void signIn()
+	{
+		signin.click();
+		UIDEmail.sendKeys("jagadish.hadimani@relevancelab.com");
+		Password.sendKeys("Welcome!123");
+		LoginButton.click();
+		
+	}
+	
+	
+	
+	public void register()
+	{
+		
+	}
+	
+	public void closeSignInPopUp()
+	{
+		PopupClose.click();
+	}
+	
+	
+	public void signOut()
+	{
+		
+		
+	}
 
 }
