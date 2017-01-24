@@ -138,6 +138,9 @@ public class ScholasticInternational_Home extends BasePage
 	@FindBy(xpath="//span[contains(text(), 'Close')]")
 	private WebElement PopupClose;
 	
+	@FindBy(linkText = "view cart")
+	private WebElement viewCartButton
+	
 	
 	//Methods to verify the elements
 		
@@ -204,9 +207,26 @@ public class ScholasticInternational_Home extends BasePage
 	
 	
 	public void signOut()
+	{}
+	
+	
+	public void mycart()
 	{
-		
+		mycart.click();
 		
 	}
+	
+	public void viewCartButton()
+	{
+		if(viewCartButton.isDisplayed())
+		
+		{
+			viewCartButton.click();
+		}
+		else {
+			
+				}
+	}
+	
 
 }
