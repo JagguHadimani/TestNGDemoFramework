@@ -139,8 +139,33 @@ public class ScholasticInternational_Home extends BasePage
 	private WebElement PopupClose;
 	
 	@FindBy(linkText = "view cart")
-	private WebElement viewCartButton
+	private WebElement viewCartButton;
 	
+	@FindBy(linkText = "Add Products")
+	private WebElement AddProducts;
+	
+	@FindBy(xpath="//li[@class= 'my-account login-account']")
+	private WebElement myAccount;
+	
+	
+	@FindBy(linkText = "My Profile")
+	private WebElement myProfile;
+	
+	@FindBy(linkText = "My Lists")
+	private WebElement mylists;
+	
+	@FindBy(linkText = "Logout")
+	private WebElement logout;
+	
+	//View Cart dropdown related
+	
+	//view cart
+	@FindBy(linkText = "view cart")
+	private WebElement viewCart;
+	
+	//checkout
+	@FindBy(linkText = "checkout")
+	private WebElement checkout;
 	
 	//Methods to verify the elements
 		
@@ -186,10 +211,14 @@ public class ScholasticInternational_Home extends BasePage
 	
 	public void signIn()
 	{
+		//Click on Sign in 
 		signin.click();
+		//Enter User name and pwd
 		UIDEmail.sendKeys("jagadish.hadimani@relevancelab.com");
 		Password.sendKeys("Welcome!123");
+		//Click on Login button
 		LoginButton.click();
+		//verify if the user is logged in
 		
 	}
 	
@@ -223,9 +252,23 @@ public class ScholasticInternational_Home extends BasePage
 		{
 			viewCartButton.click();
 		}
-		else {
-			
+		else {			
 				}
+	}
+		
+		
+		public void addProducts()
+		{
+			if(AddProducts.isDisplayed())
+			
+			{
+				AddProducts.click();
+			}
+			else {
+				
+					}
+			
+			
 	}
 	
 

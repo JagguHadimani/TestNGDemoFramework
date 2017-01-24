@@ -9,7 +9,8 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
-public class BaseTest implements AutomationConstants {
+public class BaseTest implements AutomationConstants 
+{
 	public WebDriver driver;
 	
 	@BeforeTest
