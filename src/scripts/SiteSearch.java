@@ -13,11 +13,11 @@ public class SiteSearch extends ScholasticInternational_Home
 		super(driver);
 
 	}
-
+/*
 	@Test
 	public void verifySearchFunctionality()
 	{
 		ScholasticInternational_Home sitesearch = new ScholasticInternational_Home(driver);
 		sitesearch.verifySearchFunctionality();
-	}
+	}*/
 }

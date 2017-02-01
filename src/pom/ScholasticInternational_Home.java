@@ -7,12 +7,17 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ScholasticInternational_Home extends BasePage
 	{	
-	public ScholasticInternational_Home(WebDriver driver) {
+	public ScholasticInternational_Home(WebDriver driver) 
+	{
 		super(driver);
 		
-	
-		
+		PageFactory.initElements(driver, this);
+			
 	}
+	
+	
+	ScholasticInternational_Home sI_Home = new ScholasticInternational_Home(driver);
+	
 
 	@FindBy(xpath ="//a[@class='logo']")
 	private WebElement homeLogo;
@@ -202,7 +207,7 @@ public class ScholasticInternational_Home extends BasePage
 	
 	public void verifySearchFunctionality()
 	{
-		if(searchInputBox.isDisplayed())
+//		if(searchInputBox.isDisplayed())
 		searchInputBox.sendKeys("Prime maths");
 		searchButton.click();
 		
@@ -249,8 +254,10 @@ public class ScholasticInternational_Home extends BasePage
 	{
 		if(viewCartButton.isDisplayed())
 		
-		{
+		{	//click on cart and verify if it is redirected to My Cart page.
 			viewCartButton.click();
+			sI_Home.verifyTitle("My Cart | Scholastic International");
+			
 		}
 		else {			
 				}
@@ -261,15 +268,25 @@ public class ScholasticInternational_Home extends BasePage
 		{
 			if(AddProducts.isDisplayed())
 			
-			{
+			{	//click on Add Products and verify if it is redirected to products page.
 				AddProducts.click();
+				//String Title;
+				sI_Home.verifyTitle("Educational and Trade Products | Scholastic International");
 			}
 			else {
 				
 					}
 			
+						
 			
-	}
+		}
+		
+		public void contactUsMainMenu()
+		{
+			contactUs_Main_Menu.click();
+			sI_Home.verifyTitle("Contact Us | Scholastic International");
+			
+		}
 	
 
 }

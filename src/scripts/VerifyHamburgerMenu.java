@@ -11,12 +11,13 @@ public class VerifyHamburgerMenu extends ScholasticInternational_Home
 		super(driver);
 		
 	}
+	VerifyHamburgerMenu home = new VerifyHamburgerMenu(driver);
 
 	@Test
 	public void verifyHamMenu_HomeButton()
 	
 	{
-		ScholasticInternational_Home home = new ScholasticInternational_Home(driver);
+		//ScholasticInternational_Home home = new ScholasticInternational_Home(driver);
 		home.verifyHomeLogo();
 			
 	}
@@ -26,5 +27,7 @@ public class VerifyHamburgerMenu extends ScholasticInternational_Home
 	{
 		
 	}
+	
+	//7353076739
 
 }
