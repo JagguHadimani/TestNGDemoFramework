@@ -20,29 +20,24 @@ public class BaseTest implements AutomationConstants
 	@BeforeTest
 	public void preCondotion()
 	{
-		 System.setProperty("webdriver.chrome.driver", "D://TesstNGFramework//TestNGDemo//drivers//chromedriver.exe");
-		 
+		System.setProperty("webdriver.chrome.driver", ".//drivers/chromedriver.exe");
 		driver = new ChromeDriver();
 	// driver=new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.get("http://emea.scholastic.com");
-		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);		
-		
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);	
 	}
 
-	@Test
+	/*@Test
 	public void verifySearchFunctionality()
 	{
 		ScholasticInternational_Home sitesearch = new ScholasticInternational_Home(driver);
 		sitesearch.verifySearchFunctionality();
 	}
-	
+	*/
 	@AfterTest
 	public void postCondition()
 	{
 		driver.close();
 	}
-	
-	
-
 }

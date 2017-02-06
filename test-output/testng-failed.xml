@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="scripts.BaseTest">
+      <class name="scripts.VerifyHamburgerMenu">
         <methods>
+          <include name="verifyHamMenu_HomeButton"/>
           <include name="preCondotion"/>
-          <include name="verifySearchFunctionality"/>
           <include name="postCondition"/>
         </methods>
-      </class> <!-- scripts.BaseTest -->
+      </class> <!-- scripts.VerifyHamburgerMenu -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

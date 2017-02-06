@@ -1,5 +1,6 @@
 package scripts;
 
-public class ListBuilderSearch {
+public class ListBuilderSearch extends BaseTest
+{
 
 }

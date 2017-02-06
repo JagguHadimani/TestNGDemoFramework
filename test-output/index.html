@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\rle0160\AppData\Local\Temp\testng-eclipse--1829689441\testng-customsuite.xml</span>
+                    <span>C:\Users\rle0160\AppData\Local\Temp\testng-eclipse-1644417221\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,10 +102,24 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="scripts.BaseTest" hash-for-method="verifySearchFunctionality">verifySearchFunctionality</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="scripts.VerifyHamburgerMenu" hash-for-method="verifyHamMenu_HomeButton">verifyHamMenu_HomeButton</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Default_suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="scripts.VerifyHamburgerMenu" hash-for-method="verifyHamberger_Home">verifyHamberger_Home</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -120,17 +134,20 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">scripts.BaseTest</span>
+              <span class="class-name">scripts.VerifyHamburgerMenu</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifySearchFunctionality">
-                  </a> <!-- verifySearchFunctionality -->
-                  <span class="method-name">verifySearchFunctionality</span>
+                  <a name="verifyHamMenu_HomeButton">
+                  </a> <!-- verifyHamMenu_HomeButton -->
+                  <span class="method-name">verifyHamMenu_HomeButton</span>
                   <div class="stack-trace">java.lang.StackOverflowError
-	at org.openqa.selenium.support.pagefactory.Annotations.isLookupCached(Annotations.java:45)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.&lt;init&gt;(DefaultElementLocator.java:57)
+	at com.sun.proxy.$Proxy6.how(Unknown Source)
+	at org.openqa.selenium.support.pagefactory.AbstractAnnotations.assertValidFindBy(AbstractAnnotations.java:171)
+	at org.openqa.selenium.support.pagefactory.AbstractAnnotations.buildByFromFindBy(AbstractAnnotations.java:79)
+	at org.openqa.selenium.support.pagefactory.Annotations.buildBy(Annotations.java:74)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.&lt;init&gt;(DefaultElementLocator.java:58)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.&lt;init&gt;(DefaultElementLocator.java:46)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocatorFactory.createLocator(DefaultElementLocatorFactory.java:32)
 	at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:56)
@@ -1150,19 +1167,31 @@
 	at pom.ScholasticInternational_Home.&lt;init&gt;(ScholasticInternational_Home.java:19)
 	at pom.ScholasticInternational_Home.&lt;init&gt;(ScholasticInternational_Home.java:19)
 	at pom.ScholasticInternational_Home.&lt;init&gt;(ScholasticInternational_Home.java:19)
-	at pom.ScholasticInternational_Home.&lt;init&gt;(ScholasticInternational_Home.java:19)
-	at pom.ScholasticInternational_Home.&lt;init&gt;(ScholasticInternational_Home.java:19)
-	at pom.ScholasticInternational_Home.&lt;init&gt;(ScholasticInternational_Home.java:19)
 
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">scripts.VerifyHamburgerMenu</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyHamberger_Home">
+                  </a> <!-- verifyHamberger_Home -->
+                  <span class="method-name">verifyHamberger_Home</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\rle0160\AppData\Local\Temp\testng-eclipse--1829689441\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\rle0160\AppData\Local\Temp\testng-eclipse-1644417221\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -1171,49 +1200,7 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;scripts.BaseTest&quot;/&gt;
+      &lt;class name=&quot;scripts.VerifyHamburgerMenu&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
-&lt;/suite&gt; &lt;!-- Default suite --&gt;
-            </pre>
-          </div> <!-- main-panel-content rounded-window-bottom -->
-        </div> <!-- panel -->
-        <div panel-name="testlist-Default_suite" class="panel">
-          <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Default suite</span>
-          </div> <!-- main-panel-header rounded-window-top -->
-          <div class="main-panel-content rounded-window-bottom">
-            <ul>
-              <li>
-                <span class="test-name">Default test (1 class)</span>
-              </li>
-            </ul>
-          </div> <!-- main-panel-content rounded-window-bottom -->
-        </div> <!-- panel -->
-        <div panel-name="group-Default_suite" class="panel">
-          <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Default suite</span>
-          </div> <!-- main-panel-header rounded-window-top -->
-          <div class="main-panel-content rounded-window-bottom">
-          </div> <!-- main-panel-content rounded-window-bottom -->
-        </div> <!-- panel -->
-        <div panel-name="times-Default_suite" class="panel">
-          <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Default suite</span>
-          </div> <!-- main-panel-header rounded-window-top -->
-          <div class="main-panel-content rounded-window-bottom">
-            <div class="times-div">
-              <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Default_suite');
-function tableData_Default_suite() {
-var data = new google.visualization.DataTable();
-data.addColumn('number', 'Number');
-data.addColumn('string', 'Method');
-data.addColumn('string', 'Class');
-data.addColumn('number', 'Time (ms)');
-data.addRows(1);
-data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifySearchFunctionality')
-data.setCell(0, 2, 'scripts.BaseTest')
-data.setCell(0, 3, 776);
-window.s
+&lt;/suite&gt; &lt;!-- D

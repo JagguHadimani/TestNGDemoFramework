@@ -5,26 +5,25 @@ import org.testng.annotations.Test;
 
 import pom.ScholasticInternational_Home;
 
-public class VerifyHamburgerMenu extends ScholasticInternational_Home
+public class VerifyHamburgerMenu extends BaseTest
 {
-	public VerifyHamburgerMenu(WebDriver driver) {
-		super(driver);
-		
-	}
-	VerifyHamburgerMenu home = new VerifyHamburgerMenu(driver);
+	//ScholasticInternational_Home
+
+	//VerifyHamburgerMenu home = new VerifyHamburgerMenu(driver);
 
 	@Test
 	public void verifyHamMenu_HomeButton()
 	
 	{
-		//ScholasticInternational_Home home = new ScholasticInternational_Home(driver);
-		home.verifyHomeLogo();
+	ScholasticInternational_Home home = new ScholasticInternational_Home(driver);
+	home.verifyHomeLogo();
 			
 	}
 	
 	@Test
 	public void verifyHamberger_Home()
 	{
+		ScholasticInternational_Home home1 = new ScholasticInternational_Home(driver);
 		
 	}
 	

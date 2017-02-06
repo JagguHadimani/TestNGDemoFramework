@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="33225" started-at="2017-01-31T13:09:51Z" finished-at="2017-01-31T13:10:25Z">
+  <suite name="Default suite" duration-ms="17434" started-at="2017-02-06T07:03:34Z" finished-at="2017-02-06T07:03:52Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="33225" started-at="2017-01-31T13:09:51Z" finished-at="2017-01-31T13:10:25Z">
-      <class name="scripts.BaseTest">
-        <test-method status="PASS" signature="preCondotion()[pri:0, instance:scripts.BaseTest@56f4468b]" name="preCondotion" is-config="true" duration-ms="32083" started-at="2017-01-31T18:39:51Z" finished-at="2017-01-31T18:40:23Z">
+    <test name="Default test" duration-ms="17434" started-at="2017-02-06T07:03:34Z" finished-at="2017-02-06T07:03:52Z">
+      <class name="scripts.VerifyHamburgerMenu">
+        <test-method status="PASS" signature="preCondotion()[pri:0, instance:scripts.VerifyHamburgerMenu@6cc4c815]" name="preCondotion" is-config="true" duration-ms="15675" started-at="2017-02-06T12:33:34Z" finished-at="2017-02-06T12:33:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preCondotion -->
-        <test-method status="FAIL" signature="verifySearchFunctionality()[pri:0, instance:scripts.BaseTest@56f4468b]" name="verifySearchFunctionality" duration-ms="776" started-at="2017-01-31T18:40:23Z" finished-at="2017-01-31T18:40:24Z">
+        <test-method status="FAIL" signature="verifyHamMenu_HomeButton()[pri:0, instance:scripts.VerifyHamburgerMenu@6cc4c815]" name="verifyHamMenu_HomeButton" duration-ms="1323" started-at="2017-02-06T12:33:50Z" finished-at="2017-02-06T12:33:51Z">
           <exception class="java.lang.StackOverflowError">
             <full-stacktrace>
               <![CDATA[java.lang.StackOverflowError
-	at org.openqa.selenium.support.pagefactory.Annotations.isLookupCached(Annotations.java:45)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.<init>(DefaultElementLocator.java:57)
+	at com.sun.proxy.$Proxy6.how(Unknown Source)
+	at org.openqa.selenium.support.pagefactory.AbstractAnnotations.assertValidFindBy(AbstractAnnotations.java:171)
+	at org.openqa.selenium.support.pagefactory.AbstractAnnotations.buildByFromFindBy(AbstractAnnotations.java:79)
+	at org.openqa.selenium.support.pagefactory.Annotations.buildBy(Annotations.java:74)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.<init>(DefaultElementLocator.java:58)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.<init>(DefaultElementLocator.java:46)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocatorFactory.createLocator(DefaultElementLocatorFactory.java:32)
 	at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:56)
@@ -1036,20 +1039,21 @@
 	at pom.ScholasticInternational_Home.<init>(ScholasticInternational_Home.java:19)
 	at pom.ScholasticInternational_Home.<init>(ScholasticInternational_Home.java:19)
 	at pom.ScholasticInternational_Home.<init>(ScholasticInternational_Home.java:19)
-	at pom.ScholasticInternational_Home.<init>(ScholasticInternational_Home.java:19)
-	at pom.ScholasticInternational_Home.<init>(ScholasticInternational_Home.java:19)
-	at pom.ScholasticInternational_Home.<init>(ScholasticInternational_Home.java:19)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.StackOverflowError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifySearchFunctionality -->
-        <test-method status="PASS" signature="postCondition()[pri:0, instance:scripts.BaseTest@56f4468b]" name="postCondition" is-config="true" duration-ms="330" started-at="2017-01-31T18:40:24Z" finished-at="2017-01-31T18:40:25Z">
+        </test-method> <!-- verifyHamMenu_HomeButton -->
+        <test-method status="PASS" signature="verifyHamberger_Home()[pri:0, instance:scripts.VerifyHamburgerMenu@6cc4c815]" name="verifyHamberger_Home" duration-ms="2" started-at="2017-02-06T12:33:51Z" finished-at="2017-02-06T12:33:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHamberger_Home -->
+        <test-method status="PASS" signature="postCondition()[pri:0, instance:scripts.VerifyHamburgerMenu@6cc4c815]" name="postCondition" is-config="true" duration-ms="357" started-at="2017-02-06T12:33:51Z" finished-at="2017-02-06T12:33:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postCondition -->
-      </class> <!-- scripts.BaseTest -->
+      </class> <!-- scripts.VerifyHamburgerMenu -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

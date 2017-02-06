@@ -8,11 +8,7 @@ import pom.ScholasticInternational_Home;
 public class SignIn extends BaseTest
 {
 
-	public SignIn(WebDriver driver) 
-	{
-		super();
-		
-	}
+	
 	
 	@Test
 	public void signIn()
@@ -24,3 +20,4 @@ public class SignIn extends BaseTest
 	
 	
 }
+//javagalbhanu@gmail.com

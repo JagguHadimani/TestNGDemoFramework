@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+import org.testng.Reporter;
 
 public class ScholasticInternational_Home extends BasePage
 	{	
@@ -37,8 +39,7 @@ public class ScholasticInternational_Home extends BasePage
 	@FindBy(xpath= "(//a[contains(text(), 'Contact Us')])[1]")
 	private WebElement contactUs_Main_Menu;
 	
-	//	@FindBy(linkText= "Contact Us")
-	//	private WebElement ContactUs_Main_Menu;
+	//Hamberger Menu
 	
 	@FindBy(xpath= "//button[@type='button']")
 	private WebElement hamburger_Menu_Button;
@@ -172,46 +173,34 @@ public class ScholasticInternational_Home extends BasePage
 	@FindBy(linkText = "checkout")
 	private WebElement checkout;
 	
-	//Methods to verify the elements
+	//----------------------------Methods to perform actions on the web elements ----------------------
 		
 	public void verifyHomeLogo()
 	{
-		homeLogo.isDisplayed();
+		Assert.assertTrue(homeLogo.isDisplayed());
+		Reporter.log("Scholastic Logo is displayed ");
 	}
 	
 	public void verifyHamburgermenu()
-	/*there are multiple tabs which link to respective page. Verify all the tabs redirect to the 
-	respective pages using page titles 
-	
-	HamMenu is expanded when it is only on home page, menu is contacted when user is on any page other than home page*/
 	{
-		/*//can I verify all the elements of a section in one method by may putting them in a collection say list or set?
-		hamburger_Menu.isDisplayed();
-		hamburger_Menu_HomeButton.isDisplayed();
-		hbm_Products.isDisplayed();
-		hbm_Catalogs.isDisplayed();*/
-		if(	hamburger_Menu_HomeButton.isDisplayed())
-		{
-			hamburger_Menu_HomeButton.click();
-			
-		}
-		else 
-		{
-			hamburger_Menu_Button.click();
-			hamburger_Menu_HomeButton.click();
-			
-			verifyTitle("Scholastic: Children Book Publishing | Scholastic International");
-			
-		}
+		 			
+		Assert.assertTrue(hamburger_Menu_HomeButton.isDisplayed());
+		hamburger_Menu_HomeButton.click();
+		Reporter.log("Hamburger menu is expanded and can be clicked");
+		
+		Assert.assertFalse(hamburger_Menu_HomeButton.isDisplayed());
+		hamburger_Menu_HomeButton.click();
+		Reporter.log("Hamburger menu was not expanded. Clicked on hamberger menu to expand");
+		
 	}
 	
 	public void verifySearchFunctionality()
 	{
-//		if(searchInputBox.isDisplayed())
+		Assert.assertTrue(searchInputBox.isDisplayed());
 		searchInputBox.sendKeys("Prime maths");
 		searchButton.click();
-		
-				
+		Assert.assertEquals("Search Results | Scholastic International", driver.getTitle());
+						
 	}
 	
 	public void signIn()
@@ -219,6 +208,8 @@ public class ScholasticInternational_Home extends BasePage
 		//Click on Sign in 
 		signin.click();
 		//Enter User name and pwd
+		Assert.assertTrue(UIDEmail.isDisplayed());
+		Reporter.log("Signin Pop up is visible");
 		UIDEmail.sendKeys("jagadish.hadimani@relevancelab.com");
 		Password.sendKeys("Welcome!123");
 		//Click on Login button
@@ -263,7 +254,7 @@ public class ScholasticInternational_Home extends BasePage
 				}
 	}
 		
-		
+	
 		public void addProducts()
 		{
 			if(AddProducts.isDisplayed())
@@ -276,9 +267,7 @@ public class ScholasticInternational_Home extends BasePage
 			else {
 				
 					}
-			
-						
-			
+										
 		}
 		
 		public void contactUsMainMenu()
@@ -288,5 +277,4 @@ public class ScholasticInternational_Home extends BasePage
 			
 		}
 	
-
 }

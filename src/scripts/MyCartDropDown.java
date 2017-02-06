@@ -5,14 +5,15 @@ import org.testng.annotations.Test;
 
 import pom.ScholasticInternational_Home;
 
-public class MyCartDropDown extends ScholasticInternational_Home 
+public class MyCartDropDown extends BaseTest	//ScholasticInternational_Home 
 {
 
-	public MyCartDropDown(WebDriver driver) 
+	/*public MyCartDropDown(WebDriver driver) 
 	{
 		super(driver);
+		}*/
 		
-	}
+	
 
 	
 	//@FindBy(xpath= "//li[@class='my-cart']")
