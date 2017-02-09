@@ -23,18 +23,20 @@ public class BaseTest implements AutomationConstants
 		System.setProperty("webdriver.chrome.driver", ".//drivers/chromedriver.exe");
 		driver = new ChromeDriver();
 	// driver=new FirefoxDriver();
-		driver.manage().window().maximize();
+		
+		
 		driver.get("http://emea.scholastic.com");
-		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);	
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);	
 	}
 
-	/*@Test
+	@Test
 	public void verifySearchFunctionality()
 	{
 		ScholasticInternational_Home sitesearch = new ScholasticInternational_Home(driver);
 		sitesearch.verifySearchFunctionality();
 	}
-	*/
+	
 	@AfterTest
 	public void postCondition()
 	{

@@ -1,0 +1,6 @@
+//*[text()= ""]
+//tag[contains(text(), 'text value')]
+//tag[contains(@attribute-name, 'attribute-value')]
+//tag[starts-with(text(), 'value')]
+(//tag[@attribute-name, 'attribute-value'])[position > n]
+(//tag[@attribute-name, 'attribute-value'])[last()]

@@ -24,7 +24,6 @@ public class VerifyHamburgerMenu extends BaseTest
 	public void verifyHamberger_Home()
 	{
 		ScholasticInternational_Home home1 = new ScholasticInternational_Home(driver);
-		
 	}
 	
 	//7353076739

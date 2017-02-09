@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.asserts.SoftAssert;
 
 public class ScholasticInternational_Home extends BasePage
 	{	
@@ -17,7 +18,7 @@ public class ScholasticInternational_Home extends BasePage
 			
 	}
 	
-	
+	SoftAssert sa = new SoftAssert ();
 	ScholasticInternational_Home sI_Home = new ScholasticInternational_Home(driver);
 	
 
@@ -30,9 +31,11 @@ public class ScholasticInternational_Home extends BasePage
 	@FindBy(id= "edit-submit")
 	private WebElement searchButton;
 	
+	//signin dropdown when not logged in
 	@FindBy(xpath= "//li[@class='my-account not-login-account']")
 	private WebElement signin;
 	
+	//my cart when not logged in	
 	@FindBy(xpath= "//li[@class='my-cart']")
 	private WebElement mycart;
 	
@@ -127,7 +130,7 @@ public class ScholasticInternational_Home extends BasePage
 	
 	//Signin Pop Up
 	@FindBy(xpath = "//div[@class='popups-container']")
-	private WebElement SigninPopup;
+		private WebElement SigninPopup;
 	
 	@FindBy(id="edit-name")
 	private WebElement UIDEmail;
@@ -150,6 +153,7 @@ public class ScholasticInternational_Home extends BasePage
 	@FindBy(linkText = "Add Products")
 	private WebElement AddProducts;
 	
+	//When user logged in
 	@FindBy(xpath="//li[@class= 'my-account login-account']")
 	private WebElement myAccount;
 	
@@ -173,7 +177,7 @@ public class ScholasticInternational_Home extends BasePage
 	@FindBy(linkText = "checkout")
 	private WebElement checkout;
 	
-	//----------------------------Methods to perform actions on the web elements ----------------------
+	//----------------------------Methods to perform actions on the web elements of homepage ----------------------
 		
 	public void verifyHomeLogo()
 	{
@@ -191,7 +195,6 @@ public class ScholasticInternational_Home extends BasePage
 		Assert.assertFalse(hamburger_Menu_HomeButton.isDisplayed());
 		hamburger_Menu_HomeButton.click();
 		Reporter.log("Hamburger menu was not expanded. Clicked on hamberger menu to expand");
-		
 	}
 	
 	public void verifySearchFunctionality()
@@ -199,8 +202,7 @@ public class ScholasticInternational_Home extends BasePage
 		Assert.assertTrue(searchInputBox.isDisplayed());
 		searchInputBox.sendKeys("Prime maths");
 		searchButton.click();
-		Assert.assertEquals("Search Results | Scholastic International", driver.getTitle());
-						
+		Assert.assertEquals("Search Results | Scholastic International", driver.getTitle());						
 	}
 	
 	public void signIn()
@@ -208,14 +210,16 @@ public class ScholasticInternational_Home extends BasePage
 		//Click on Sign in 
 		signin.click();
 		//Enter User name and pwd
-		Assert.assertTrue(UIDEmail.isDisplayed());
+		
+		Assert.assertTrue(SigninPopup.isDisplayed());
 		Reporter.log("Signin Pop up is visible");
 		UIDEmail.sendKeys("jagadish.hadimani@relevancelab.com");
 		Password.sendKeys("Welcome!123");
 		//Click on Login button
 		LoginButton.click();
 		//verify if the user is logged in
-		
+		Assert.assertTrue(myAccount.isDisplayed());
+		Reporter.log("User successfully logged in");
 	}
 	
 	
@@ -227,48 +231,41 @@ public class ScholasticInternational_Home extends BasePage
 	
 	public void closeSignInPopUp()
 	{
+		Assert.assertTrue(SigninPopup.isDisplayed());
 		PopupClose.click();
 	}
 	
 	
 	public void signOut()
-	{}
+	{
+		Assert.assertTrue(myAccount.isDisplayed());
+		myAccount.click();
+		Assert.assertTrue(logout.isDisplayed());
+		//verify if the user is logged out.
+		Assert.assertTrue(signin.isDisplayed());
+		
+	}
 	
 	
 	public void mycart()
 	{
-		mycart.click();
+		//Assert.assertTrue(mycart.click());
 		
 	}
 	
 	public void viewCartButton()
 	{
-		if(viewCartButton.isDisplayed())
+		//viewCartButton.isDisplayed()
 		
-		{	//click on cart and verify if it is redirected to My Cart page.
+			//click on cart and verify if it is redirected to My Cart page.
 			viewCartButton.click();
-			sI_Home.verifyTitle("My Cart | Scholastic International");
 			
-		}
-		else {			
-				}
 	}
 		
 	
 		public void addProducts()
 		{
-			if(AddProducts.isDisplayed())
-			
-			{	//click on Add Products and verify if it is redirected to products page.
-				AddProducts.click();
-				//String Title;
-				sI_Home.verifyTitle("Educational and Trade Products | Scholastic International");
-			}
-			else {
-				
-					}
-										
-		}
+		}	
 		
 		public void contactUsMainMenu()
 		{
@@ -277,4 +274,18 @@ public class ScholasticInternational_Home extends BasePage
 			
 		}
 	
+		public void listBuilderSearchFunctionality()
+		{
+			Assert.assertTrue(ListBuilderInputBox.isDisplayed());
+			ListBuilderInputBox.sendKeys("Geronimo Stilton");
+			ListBuilderSearchButton.click();
+		
+			//locate the string which is suffixed to "you searched for"
+			String searchterm="";
+			//on Search builder page verify "You search for <Search term>" is displayed.
+			Reporter.log(searchterm);
+
+		}
+		
+		
 }

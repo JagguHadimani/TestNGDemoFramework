@@ -15,9 +15,9 @@ public class SignIn extends BaseTest
 	{
 		ScholasticInternational_Home signin = new ScholasticInternational_Home(driver);
 		signin.signIn();
+		
 	}
 
 	
 	
 }
-//javagalbhanu@gmail.com
