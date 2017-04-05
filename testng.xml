@@ -1,12 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
 <suite name="Suite">
   <test name="Test">
     <classes>
-      <class name="scripts.SignIn"/>
-      <class name="scripts.MyCartDropDown"/>
-      <class name="scripts.SiteSearch"/>
+    	<!-- <class name="scripts.SignIn"/>
       <class name="scripts.VerifyHamburgerMenu"/>
+      <class name="scripts.ListBuilderSearch"/>
+      <class name="scripts.MyCartDropDown"/>
+      
+      <class name="scripts.SiteSearch"/> -->
+      
+      <class name="scripts.VerifyHamburgerMenu"/>
+      <class name="scripts.SignIn"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

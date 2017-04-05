@@ -4,3 +4,6 @@
 //tag[starts-with(text(), 'value')]
 (//tag[@attribute-name, 'attribute-value'])[position > n]
 (//tag[@attribute-name, 'attribute-value'])[last()]
+
+OR operator
+(//*[@att-type = 'att-val'])|(//*[@att-type = 'att-val'])

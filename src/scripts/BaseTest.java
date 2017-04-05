@@ -30,16 +30,10 @@ public class BaseTest implements AutomationConstants
 		driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);	
 	}
 
-	@Test
-	public void verifySearchFunctionality()
-	{
-		ScholasticInternational_Home sitesearch = new ScholasticInternational_Home(driver);
-		sitesearch.verifySearchFunctionality();
-	}
 	
-	@AfterTest
+	/*@AfterTest
 	public void postCondition()
 	{
 		driver.close();
-	}
+	}*/
 }

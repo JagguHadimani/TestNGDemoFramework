@@ -23,8 +23,9 @@ public class MyCartDropDown extends BaseTest	//ScholasticInternational_Home
 	public void verifymycartdropdown()
 	{
 		ScholasticInternational_Home mycart = new ScholasticInternational_Home(driver);
+		System.out.println(driver);
 		mycart.mycart();
-		mycart.addProducts();
+		//mycart.addProducts();
 		//public void verifyTitle(String );
 		
 	}

@@ -1,25 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+<suite name="Failed suite [Suite]">
   <test name="Test(failed)">
     <classes>
       <class name="scripts.SignIn">
         <methods>
-          <include name="preCondotion"/>
           <include name="signIn"/>
-          <include name="postCondition"/>
         </methods>
       </class> <!-- scripts.SignIn -->
-      <class name="scripts.SiteSearch">
+      <class name="scripts.VerifyHamburgerMenu">
         <methods>
-          <include name="verifySearchFunctionality"/>
+          <include name="preCondotion"/>
         </methods>
-      </class> <!-- scripts.SiteSearch -->
-      <class name="scripts.MyCartDropDown">
-        <methods>
-          <include name="verifymycartdropdown"/>
-        </methods>
-      </class> <!-- scripts.MyCartDropDown -->
+      </class> <!-- scripts.VerifyHamburgerMenu -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
